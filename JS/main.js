@@ -27,6 +27,15 @@ class Propiedades {
     this.ambientes = ambientes;
     this.precioMensual = precioMensual;
   }
+  mostrarDireccion() {
+    console.log("La dirección de la propiedad es: " + this.direccion);
+  }
+  mostrarAmbientes() {
+    console.log("Posee " + this.ambientes + " ambientes");
+  }
+  mostrarPrecio() {
+    this.precioMensual("El precio mensual es: U$s " + this.precioMensual);
+  }
 }
 
 const propiedad1 = new Propiedades("Av.Libertador 6299 depto 701", 2, 1500);
@@ -45,13 +54,35 @@ console.log(propiedad2);
 console.log(propiedad3);
 console.log(propiedad4);
 
+/*Array*/
+/*los contratos de alquiler temporario máximo pueden ser por 3 meses,
+se alquilaria por semana, son máximo 12 semanas*/
+
+const semanas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+/*
+for (let index = 0, index < 12, index++) {
+  console.log (semanas [index])
+}
+console.log (semanas.length);
+
+
+
+
+
+
+
+
+
+
+
 /*
 const porcentajeComision = 0.2;
 const valorInmuebleAlquiler = prompt("ingrese valor del alquiler");
 const valorConComision = valorInmuebleAlquiler * porcentajeComision;
 alert("pagara: " + valorConComision);
 */
-
+/*
 const calcularAlquiler = function (precioAlquiler) {
   if (precioAlquiler < 4 || precioAlquiler > 3) {
     return 600;
