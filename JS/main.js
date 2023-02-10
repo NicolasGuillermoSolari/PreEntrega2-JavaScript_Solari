@@ -5,20 +5,6 @@ if (mayorDeEdad >= 18) {
 } else {
   alert("Debe ser mayor de edad para ingresar");
 }
-/*ciclo
-let nombresInquilinos = prompt(
-  "ingrese nombre de una de las personas que va a alquilar, o escriba SALIR"
-);
-while (nombresInquilinos != "SALIR") {
-  alert("El nombre del inquilino es " + nombresInquilinos);
-  nombresInquilinos = prompt(
-    "ingrese nombre de una de las personas que va a alquilar, o escriba SALIR"
-  );
-}
-if ((nombresInquilinos = " ")) {
-  alert(" no puede dejar vacio el estacio, escriba SALIR");
-}
-*/
 
 /*objetos*/
 class Propiedades {
@@ -59,22 +45,27 @@ console.log(propiedad4);
 se alquilaria por semana, son máximo 12 semanas*/
 
 const semanas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let estadia =
+  semanas[prompt("ingrese en que semana termina su estadia")] -
+  semanas[prompt("ingrese en que semana empieza su estadia")];
 
-/*
-for (let index = 0, index < 12, index++) {
-  console.log (semanas [index])
+for (let index = 0; index < 12; index++) {
+  alert(semanas[index]);
 }
-console.log (semanas.length);
 
-
-
-
-
-
-
-
-
-
+/*ciclo*/
+let nombresInquilinos = prompt(
+  "ingrese nombre de una de las personas que va a alquilar, o escriba SALIR"
+);
+while (nombresInquilinos != "SALIR") {
+  alert("El nombre del inquilino es " + nombresInquilinos);
+  nombresInquilinos = prompt(
+    "ingrese nombre de una de las personas que va a alquilar, o escriba SALIR"
+  );
+}
+if ((nombresInquilinos = " ")) {
+  alert(" no puede dejar vacio el estacio, escriba SALIR");
+}
 
 /*
 const porcentajeComision = 0.2;
@@ -92,38 +83,4 @@ const calcularAlquiler = function (precioAlquiler) {
     return 400;
   }
   return 200;
-};
-
-/*Objeto constructor*/
-/*function PropiedadEnAlquiler(direccion, ambientes, precioMensual) {
-  this.direccion = direccion;
-  this.ambientes = ambientes;
-  this.precioMensual = precioMensual;
-
-  this.mostrarNombre = function () {
-    console.log("La dirección del inmueble a alquilar es: " + this.direccion);
-  };
-}
-
-const propiedadEnAlquiler1 = new PropiedadEnAlquiler(
-  "Av.Libertador 6299 depto 815",
-  2,
-  1500
-);
-console.log(propiedadEnAlquiler1);
-const propiedadEnAlquiler2 = new PropiedadEnAlquiler("Guatemala 5500", 2, 1200);
-console.log(propiedadEnAlquiler2);
-const propiedadEnAlquiler3 = new PropiedadEnAlquiler(
-  "Av.Libertador 6100 ",
-  2,
-  600
-);
-console.log(propiedadEnAlquiler3);
-const propiedadEnAlquiler4 = new PropiedadEnAlquiler(
-  "Av. Libertador 6300",
-  2,
-  500
-);
-console.log(propiedadEnAlquiler4);
-PropiedadEnAlquiler.direccion();
-*/
+};*/
